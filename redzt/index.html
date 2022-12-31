@@ -25,16 +25,16 @@
       font-family: sans-serif;
     }
 
-    h1 {
+    .h1 {
       font-size: 42px;
     }
 
-    a {
+    .a {
       color: #555;
       text-decoration: none;
     }
 
-    p {
+    .p {
       line-height: 1.5;
       font-size: 18px;
     }
@@ -132,13 +132,26 @@
         max-width: 75%;
       }
       .alt {
-        font-size: 4vw;
+        font-size: 3vw;
       }
 
-      h1 {
+      .hedll h1 {
         font-size: 5vw;
+        font-weight: bold;
       }
-    }
+      @media (max-width: 1200px) {
+.hedll h1 {
+font-size: 5vw;
+font-weight: bold;
+}
+}
+@media (max-width: 640px) {
+.hedll h1 {
+font-size: 5vw;
+font-weight: bold;
+}
+}
+      
   </style>
 </head>
 <body>
@@ -147,9 +160,10 @@ Cupom de desconto ativado!
 </div>
 <section class="px-lg-20 px-sm-2 center">
 <br>
+<div class="hedll">
 <h1>
 Parabéns, foi selecionado e acaba de ganhar <span class="hl">R$ 30,00 de desconto</span> no Protocolo Zero Barriga!
-</h1>
+</h1></div>
 <hr class="mt-3">
 <p class="mt-3"><strong>Parabéns por ter chegado até aqui!</strong></p>
 <p>Eu não quero que o dinheiro seja um problema quando se trata de alcançar o corpo ideal.</p>
@@ -178,18 +192,18 @@ SIM! QUERO OBTER ACESSO!
 </a>
 <br /><br />
 </section>
-<div class="divisas-5151ds__wrapper">
+<div class="divisas-5151ds__wrapper center">
 <div id="divisas-5151ds" class="mvgPMY0494008">
 <div class="footer-151154">
 <footer class="footer-151154-element">
 <p>Copyright 2022 – ®Todos os Direitos Reservados</p>
-<br>
 <div class="text-grey"><a href="termos.html" class="text-grey">Termos de Uso</a> | <a href="privacidade.html" class="text-grey">Política de Privacidade</a></div>
 <script>
             const pr = window.location.href + "/privacidade",
             te = window.location.href + "/termos";
             document.getElementById("p").setAttribute("href", pr), document.getElementById("t").setAttribute("href", te);
 </script>
+<br>
 </footer>
 </div>
 </div>
