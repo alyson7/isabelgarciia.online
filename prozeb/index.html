@@ -60,6 +60,21 @@
     </script>
 <!-- End Rastreamento Hot -->
 
+<script type="text/javascript">
+    var back_redirect_back_link = '/redzt'+ location.search;
+    // Não altere daqui para baixo
+    history.pushState({}, "", location.href);
+    history.pushState({}, "", location.href);
+
+    window.addEventListener('popstate', function (event) {
+        if (event.state) {
+            setTimeout(function () {
+             
+                location.href = back_redirect_back_link;
+            }, 1);
+        }
+    }, false);
+</script>
   </head>
   <body>
 
@@ -107,7 +122,7 @@
              <center><span style="color: #fafafa; margin-top: 1em;" class="d-inline-block"> 🔊 Verifique se o seu som está ligado!</span></center>
             
             <div id="ctt1" class="mt-4 d-none">
-              <a href="https://pay.kiwify.com.br/v3ICZds" class="a4-btn" style="text-decoration: none;">
+              <a href="https://pay.kiwify.com.br/MqlNsHu" style="text-decoration: none;">
                 <span class="spa-btn">QUERO OBTER ACESSO</span></a>
          </div>
         <br>
@@ -496,7 +511,7 @@ Você precisa estar logado para comentar.
 </div>
 <br>
             <div id="ctt2" class="mt-4 d-none">
-              <a href="https://pay.kiwify.com.br/v3ICZds" class="a4-btn" style="text-decoration: none;">
+              <a href="https://pay.kiwify.com.br/MqlNsHu" style="text-decoration: none;">
                 <span class="spa-btn">QUERO OBTER ACESSO</span>
                 <span class="spa-btn2">(atenção: vagas limitadas)</span>
               </a>
