@@ -51,30 +51,43 @@
 /></noscript>
 <!-- End Meta Pixel Code -->
 
- <!-- Rastreamento Hotmart Analytics -->
-    <script id="hotmart_launcher_script">
-      (function(l,a,u,n,c,h,e,r){l['HotmartLauncherObject']=c;l[c]=l[c]||function(){
-      (l[c].q=l[c].q||[]).push(arguments)},l[c].l=1*new Date();h=a.createElement(u),
-      e=a.getElementsByTagName(u)[0];h.async=1;h.src=n;e.parentNode.insertBefore(h,e)
-      })(window,document,'script','//launcher.hotmart.com/launcher.js','hot');
-
-      hot('account','044035ff-cf19-3543-ae98-94dac2143b05');
-    </script>
-<!-- End Rastreamento Hot -->
-
 <script>
-(function(window, location) {
-var bbURL = 'isabelgarciia.online/redirect';
-history.pushState(null, document.title, location);
-window.addEventListener("popstate", function() {
-history.replaceState(null, document.title, location);
-setTimeout(function() {
-location.replace(bbURL);
-}, 0);
-}, false);
-}(window, location));
-</script>
+    let prefix = ["https://pay.kiwify.com.br"];
+ 
+function getParams() {
+    let t = "",
+        e = window.top.location.href,
+        r = new URL(e);
+    if (null != r) {
+        let a = r.searchParams.get("utm_source"),
+            n = r.searchParams.get("utm_medium"),
+            o = r.searchParams.get("utm_campaign"),
+            m = r.searchParams.get("utm_term"),
+            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+    }
+    return t
+}! function() {
+    var t = new URLSearchParams(window.location.search);
+    t.toString() && document.querySelectorAll("a").forEach(function(e) {
+        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+    })
+}(); </script>
 
+<script type="text/javascript">
+    var back_redirect_back_link = '/redirect'+ location.search;
+    // Não altere daqui para baixo
+    history.pushState({}, "", location.href);
+    history.pushState({}, "", location.href);
+
+    window.addEventListener('popstate', function (event) {
+        if (event.state) {
+            setTimeout(function () {
+             
+                location.href = back_redirect_back_link;
+            }, 1);
+        }
+    }, false);
+</script>
   </head>
   <body>
 
@@ -535,37 +548,14 @@ Você precisa estar logado para comentar.
 </div>
 </div>
 
+<script src="js/e.js" charset="utf-8"></script>
+
     <script type="text/javascript">
       setTimeout(() => {document.getElementById("ctt1").classList.remove("d-none"); document.getElementById("ctt2").classList.remove("d-none")}, 1295000); // temporização CTA (em milissegundos) 
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="./assets/js/com.js"></script>
   
-   <script>
-    let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com"];
- 
-function getParams() {
-    let t = "",
-        e = window.top.location.href,
-        r = new URL(e);
-    if (null != r) {
-        let a = r.searchParams.get("utm_source"),
-            n = r.searchParams.get("utm_medium"),
-            o = r.searchParams.get("utm_campaign"),
-            m = r.searchParams.get("utm_term"),
-            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
-    }
-    return t
-}! function() {
-    var t = new URLSearchParams(window.location.search);
-    t.toString() && document.querySelectorAll("a").forEach(function(e) {
-        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
-    })
-}();
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
 </script>
-
   </body>
 </html>
