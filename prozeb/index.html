@@ -74,20 +74,18 @@ function getParams() {
 }(); </script>
 
 <script type="text/javascript">
-    var back_redirect_back_link = '/redirect'+ location.search;
-    // Não altere daqui para baixo
-    history.pushState({}, "", location.href);
-    history.pushState({}, "", location.href);
-
-    window.addEventListener('popstate', function (event) {
-        if (event.state) {
-            setTimeout(function () {
-             
-                location.href = back_redirect_back_link;
-            }, 1);
-        }
-    }, false);
-</script>
+        var query = location.search.slice(1);
+        var back_redirect_back_link = 'https://isabelgarciia.online/redirect/';
+    
+        history.pushState({},"",location.href);
+        history.pushState({},"",location.href);
+    
+        window.onpopstate = function(){
+          setTimeout(function () {
+            location.href = back_redirect_back_link;
+          },1);
+        };
+      </script>
   </head>
   <body>
 
@@ -547,8 +545,6 @@ Você precisa estar logado para comentar.
 </footer>
 </div>
 </div>
-
-<script src="js/e.js" charset="utf-8"></script>
 
     <script type="text/javascript">
       setTimeout(() => {document.getElementById("ctt1").classList.remove("d-none"); document.getElementById("ctt2").classList.remove("d-none")}, 1295000); // temporização CTA (em milissegundos) 
